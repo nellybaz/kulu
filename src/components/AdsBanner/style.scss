@@ -1,0 +1,15 @@
+@import '../../styles/styleguide.scss';
+
+.Banner{
+    height: 70px;
+    width:100%;
+    background: $primary;
+    margin-top: 30px;
+
+    p{
+        color: $grey;
+        span{
+            color: #fff;
+        }
+    }
+}

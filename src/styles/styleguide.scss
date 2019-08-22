@@ -1,0 +1,77 @@
+//VARIABLES 
+
+//fonts
+$normalFont:16px;
+$headingFont:32px;
+
+//family
+$fontFamily: Roboto, system-ui, system-ui, -apple-system, "Segoe UI", Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+
+
+//sizings
+$mainPadding: 10%;
+
+
+
+//colors
+$primary:#131313;
+$secondary:#F2F4F5;
+$grey:#6e6e6e;
+
+
+//base text properties for the web app
+%text {
+    font-size: $normalFont;
+    color: $primary;
+    line-height: 40px;
+    font-family: $fontFamily;
+    font-weight: 400;
+}
+
+
+//standard styles below
+.p{
+    @extend %text;
+}
+
+.p-nav{
+    @extend %text;
+    color: $grey;
+}
+
+.p-price{
+    @extend %text;
+    color: $grey;
+    font-size: 14px;
+}
+
+.heading{
+    @extend %text;
+    font-size: $headingFont;
+    font-weight: 500;
+}
+
+.center{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:row ;
+}
+
+.center-col{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction: column;
+}
+
+
+.hide{
+    display: none;
+}
+
+@media only screen and (max-width: 900px){
+    .mobile-hide{
+        display: none;
+    }
+}

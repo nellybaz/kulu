@@ -1,0 +1,79 @@
+.p, .p-nav, .p-price, .heading {
+  font-size: 16px;
+  color: #131313;
+  line-height: 40px;
+  font-family: Roboto, system-ui, system-ui, -apple-system, "Segoe UI", Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+}
+
+.p-nav {
+  color: #6e6e6e;
+}
+
+.p-price {
+  color: #6e6e6e;
+  font-size: 14px;
+}
+
+.heading {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.center-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.hide {
+  display: none;
+}
+
+@media only screen and (max-width: 900px) {
+  .mobile-hide {
+    display: none;
+  }
+}
+
+.Banner {
+  height: 70px;
+  width: 100%;
+  background: #131313;
+  margin-top: 30px;
+}
+
+.Banner p {
+  color: #6e6e6e;
+}
+
+.Banner p span {
+  color: #fff;
+}
+/*# sourceMappingURL=style.css.map */

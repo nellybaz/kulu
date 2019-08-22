@@ -1,0 +1,24 @@
+@import '../../styles/styleguide.scss';
+
+.Products{
+    width:100%;
+    padding: 0 $mainPadding;
+
+    .products-container{
+        
+        width:100%;
+
+        .heading{
+            margin: 55px 0;
+        }
+
+        .products-list{
+            margin-top:30px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 40px;
+            
+        }
+        
+    }
+}
