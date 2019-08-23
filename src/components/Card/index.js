@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 
 function Card(props){
-    return(
+    return( 
         <div className="Card">
             <div className="card-img">
                 <img 
