@@ -60,26 +60,13 @@
   background: #131313;
 }
 
-.Card {
-  width: 360px;
-  height: 450px;
+.Cart {
+  width: 100%;
+  margin-top: 50px;
 }
 
-.Card .card-img {
+.Cart .cart-list-container {
   width: 100%;
-  height: 360px;
-  background: #F2F4F5;
-}
-
-.Card .card-img img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
-.Card .card-info {
-  width: 100%;
-  height: 100%;
+  margin-top: 30px;
 }
 /*# sourceMappingURL=style.css.map */

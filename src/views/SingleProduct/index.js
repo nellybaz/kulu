@@ -1,13 +1,6 @@
 import React from 'react';
 import './style.css';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
-import AdsBanner from '../../components/AdsBanner';
 import { gateway as MoltinGateway } from '@moltin/sdk'
-
-const adsText = <p className="p">
-    Use code <span>SAVE50</span> at checkout for 50% off all orders
-</p>;
 
 const Moltin = MoltinGateway({
     client_id: 'XLN7jy6eCDB49zvV2Jnxl9orLpOjyZE6OSWQFupzaK'
@@ -20,10 +13,15 @@ class SingleProduct extends React.Component {
         this.state= {
             product :{},
             productImg:'',
+            quantity: 1,
         }
     }
 
     componentDidMount(){
+        console.log(
+            this.props
+        );
+        
         Moltin.Authenticate().then(response => {
             console.log('authenticated', response)
         });
@@ -31,21 +29,37 @@ class SingleProduct extends React.Component {
         let productID = this.props.match.params.product_id;
         console.log(productID);
 
-        Moltin.Products.With('main_image').Get(productID).then(res => {
-                console.log(res);
+        for(let i=0; i < this.props.state.productList.length; i++){
+            if(this.props.state.productList[i]['id'] == productID){
                 this.setState({
-                    product: res.data,
-                    productImg: res.included.main_images[0].link.href,
-                });
-                
-        });
-        
+                    product : this.props.state.productList[i],
+                    productImg : this.props.state.productImages[i].link.href
+                })
+                break;
+            }
+        }
+    
     }
 
+    /// update the selected quantity
+    handleQuantityChange =(e)=>{
+      
+        this.setState({
+            quantity: e.target.value
+        });
+    }
+        
     addToCart=()=>{
         let productID = this.props.match.params.product_id;
-        Moltin.Cart().AddProduct(productID, 1).then(res => {
+
+        Moltin.Cart().AddProduct(productID, this.state.quantity).then(res => {
             console.log(res);
+
+            //after updating cart, get the new cart and push to parent component
+            Moltin.Cart().Items().then(res => {
+                console.log(res);
+                this.props.updateCart(res.data)
+            });
         })
     }
     render() {
@@ -59,8 +73,7 @@ class SingleProduct extends React.Component {
                     <div className="prod-info">
                         <div className="price-section">
                             <h4 className="p">
-                                {/* {this.state.product.price[0]} */}
-                                $200
+                                {'$200'}
                             <span>
                                     IN STOCK
                             </span>
@@ -71,8 +84,17 @@ class SingleProduct extends React.Component {
                             </p>
 
                             <div className="btn-div">
-                                <input type="number" min="1" max="10" />
+                                <select onChange={this.handleQuantityChange}>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                </select>
                                 <button 
+                                onClick={this.addToCart}
                                 className="btn-send"
                                 >Add to cart</button>
                             </div>
@@ -90,7 +112,6 @@ class SingleProduct extends React.Component {
 
 
                 </div>
-                <AdsBanner text={adsText} />
             </div>
         );
     };

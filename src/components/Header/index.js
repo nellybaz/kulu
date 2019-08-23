@@ -4,18 +4,22 @@ import './style.css'
 
 
 function Header(props) {
+    let cartNumber = 0;
+    for(let i = 0; i < props.cart.length; i++){
+        cartNumber += props.cart[i].quantity;
+    }
     return (
         <div className="Header">
             <div className="nav-links">
                 <ul>
                     <li >
-                        <a className="p-nav" href="/products">Products</a>
+                        <Link className="p-nav" to="/products">Products</Link>
                     </li>
                     <li >
-                        <a className="p-nav" href="/about">About</a>
+                        <Link className="p-nav" to="/about">About</Link>
                     </li>
                     <li >
-                        <a className="p-nav" href="/collections">Collections</a>
+                        <Link className="p-nav" to="/collections">Collections</Link>
                     </li>
                 </ul>
             </div>
@@ -23,9 +27,10 @@ function Header(props) {
                 <h2 className="heading" >KULU</h2>
             </div>
             <div className="cart">
-                <a href="/cart">
+                <Link to="/cart">
+                    {props.cart.length > 0  && <p className="p">{cartNumber}</p>}
                 <img src={require('../../assets/img/icons/shopping-bag.svg')} alt="shop with kulu" />
-                </a>
+                </Link>
             </div>
         </div>
     );

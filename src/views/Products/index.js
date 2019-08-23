@@ -14,8 +14,8 @@ class Products extends Component {
                     <div className="products-list">
                         {
                             this.props.productList.map((item, index)=>   
-                                <Link to={`/product/${item.id}`}>
-                                <Card {...item} imgs={this.props.productImages} index={index}/>
+                                <Link key={item.id} to={`/product/${item.id}`}>
+                                    <Card {...item} imgs={this.props.productImages} index={index}/>
                                 </Link>)
                         }
                     </div>
