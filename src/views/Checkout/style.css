@@ -60,6 +60,49 @@
   background: #131313;
 }
 
+@media only screen and (max-width: 900px) {
+  .grid-mobile {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .mobile-hide {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .desktop-hide {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .checkout-container {
+    -ms-grid-columns: 3fr 2fr;
+        grid-template-columns: 3fr 2fr;
+  }
+  .btn-checkout-zulu {
+    width: 80%;
+  }
+  input {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .checkout-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .btn-checkout-zulu {
+    width: 100%;
+  }
+  input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
 .Checkout {
   width: 100%;
   margin-bottom: 50px;
@@ -73,8 +116,6 @@
   width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 3fr 2fr;
-      grid-template-columns: 3fr 2fr;
 }
 
 .Checkout .checkout-container .contact-info, .Checkout .checkout-container .shopping-cart {
@@ -88,7 +129,6 @@
 
 .Checkout .checkout-container .contact-info input {
   height: 48px;
-  width: 40%;
   margin-right: 10px;
   font-size: 13px;
   border: 1px solid #131313;
@@ -98,7 +138,6 @@
 .Checkout .checkout-container .contact-info .btn-checkout-zulu {
   background: #131313;
   color: white;
-  width: 80%;
   margin-top: 40px;
   padding: 1.5em 3em;
   border: none;

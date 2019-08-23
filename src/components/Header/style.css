@@ -60,6 +60,22 @@
   background: #131313;
 }
 
+@media only screen and (max-width: 900px) {
+  .grid-mobile {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .mobile-hide {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .desktop-hide {
+    display: none !important;
+  }
+}
+
 .Header {
   width: 100%;
   height: 100px;

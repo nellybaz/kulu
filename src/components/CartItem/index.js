@@ -8,7 +8,7 @@ function CartItem(props){
     
     return (
         <div className="CartItem">
-            <div className="cart-item-info">
+            <div className="cart-item-info mobile-grid">
                 <div className="cart-img-div">
                     <img src={props.image.href}  alt= "kulu spark shoes for men"/>
                 </div>

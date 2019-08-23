@@ -19,7 +19,7 @@ function Card(props){
             </div>
 
         </div>
-    );
+    ); 
 }
 
 Card.propTypes = {

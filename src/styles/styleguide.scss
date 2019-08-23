@@ -69,12 +69,26 @@ $grey:#6e6e6e;
     display: none;
 }
 
-.btn{
-    // padding: 2em 3em;
-    // height: 48px;
-}
 
 .bg{
     background: $primary;
     
+}
+
+@media only screen and (max-width: 900px){
+    .grid-mobile{
+        grid-template-columns: 1fr;
+    }
+
+    .mobile-hide{
+        display: none !important;
+    }
+}
+
+
+@media only screen and (min-width: 900px){
+
+    .desktop-hide{
+        display: none !important;
+    }
 }

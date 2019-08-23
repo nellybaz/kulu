@@ -60,6 +60,54 @@
   background: #131313;
 }
 
+@media only screen and (max-width: 900px) {
+  .grid-mobile {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .mobile-hide {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .desktop-hide {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .container {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    height: 600px;
+  }
+  .img-div {
+    height: 400px;
+  }
+  select {
+    width: 100px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .container {
+    height: auto;
+  }
+  .img-div {
+    height: 300px;
+  }
+  select {
+    border: 1px solid #131313;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .btn-send {
+    margin-left: 0 !important;
+    width: 100%;
+  }
+}
+
 .SingleProduct {
   width: 100%;
   padding: 0 10%;
@@ -68,17 +116,13 @@
 
 .SingleProduct .container {
   width: 90%;
-  height: 500px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  margin-top: 60px;
+  margin: 60px 0;
 }
 
 .SingleProduct .container .img-div {
   width: 100%;
-  height: 100%;
 }
 
 .SingleProduct .container .img-div img {
@@ -115,7 +159,6 @@
 
 .SingleProduct .container .prod-info .price-section .btn-div select {
   height: 48px;
-  width: 100px;
   font-size: 18px;
 }
 
@@ -143,5 +186,6 @@
 .SingleProduct .container .prod-info .info-desc .p-text {
   line-height: 30px;
   color: #6e6e6e;
+  text-align: justify;
 }
 /*# sourceMappingURL=style.css.map */

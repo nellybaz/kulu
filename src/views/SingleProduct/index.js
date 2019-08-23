@@ -65,7 +65,7 @@ class SingleProduct extends React.Component {
     render() {
         return (
             <div className="SingleProduct">
-                <div className="container">
+                <div className="container grid-mobile">
                     <div className="img-div">
                         <img src={this.state.productImg} alt="kulu's finest product for your sale" />
                     </div>

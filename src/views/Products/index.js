@@ -11,7 +11,7 @@ class Products extends Component {
                 <section className="products-container center-col">
                     <h3 className="heading">All Products</h3>
  
-                    <div className="products-list">
+                    <div className="products-list grid-mobile">
                         {
                             this.props.productList.map((item, index)=>   
                                 <Link key={item.id} to={`/product/${item.id}`}>
@@ -22,10 +22,10 @@ class Products extends Component {
                 </section>
 
                 
-            </div>
+            </div> 
         );
     };
 }
- 
+  
 
 export default Products;

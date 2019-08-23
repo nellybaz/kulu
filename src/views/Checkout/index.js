@@ -44,7 +44,7 @@ class Checkout extends Component {
 
                     </div>
 
-                    <div className="shopping-cart">
+                    <div className="shopping-cart mobile-hide">
                         <h3 className="p">Shopping Cart</h3>
                         <div className="list">
                             {this.props.cart.map(item => 

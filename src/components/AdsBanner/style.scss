@@ -5,9 +5,12 @@
     width:100%;
     background: $primary;
     margin-top: 30px;
+    padding: 0 30px;
 
     p{
+        text-align: center;
         color: $grey;
+        line-height: 24px;
         span{
             color: #fff;
         }

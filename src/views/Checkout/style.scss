@@ -1,5 +1,39 @@
 @import '../../styles/styleguide.scss';
 
+
+
+@media only screen and (min-width:900px){
+ 
+    .checkout-container{
+        grid-template-columns: 3fr 2fr;
+    }
+
+    .btn-checkout-zulu{
+        width:80%;
+    }
+    input{
+        width:40%;
+    }
+}
+
+
+
+@media only screen and (max-width:900px){
+    .checkout-container{
+        grid-template-columns: 1fr;
+    }
+
+    .btn-checkout-zulu{
+        width:100%;
+    }
+
+    input{
+        width:100%;
+        margin-bottom: 10px;
+    }
+
+}
+
 .Checkout{
     width:100%;
     margin-bottom: 50px;
@@ -13,8 +47,6 @@
         width:100%;
         // border:1px solid red;
         display: grid;
-        grid-template-columns: 3fr 2fr;
-
 
         .contact-info, .shopping-cart{
             // border:1px solid red;
@@ -29,7 +61,6 @@
 
             input{
                 height:48px;
-                width:40%;
                 margin-right: 10px;
                 font-size: 13px;
                 border:1px solid $primary;
@@ -39,7 +70,6 @@
             .btn-checkout-zulu{
                 background: $primary;
                 color: white;
-                width:80%;
                 margin-top: 40px;
                 padding: 1.5em 3em;
                 border:none;

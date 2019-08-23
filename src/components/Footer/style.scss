@@ -1,9 +1,23 @@
 @import '../../styles/styleguide.scss';
 
+
+@media only screen and (min-width:900px){
+    .Footer{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+@media only screen and (max-width:900px){
+    .Footer{
+        grid-template-columns: 1fr;
+    } 
+}
+ 
+
 .Footer{
     width:100%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     height:300px;
     margin-top: 60px;
 

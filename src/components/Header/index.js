@@ -8,9 +8,9 @@ function Header(props) {
     for(let i = 0; i < props.cart.length; i++){
         cartNumber += props.cart[i].quantity;
     }
-    return (
+    return ( 
         <div className="Header">
-            <div className="nav-links">
+            <div className="nav-links mobile-hide">
                 <ul>
                     <li >
                         <Link className="p-nav" to="/products">Products</Link>
@@ -26,6 +26,11 @@ function Header(props) {
             <div className="logo center">
                 <h2 className="heading" >KULU</h2>
             </div>
+
+            {/* mobile nav options starts */}
+                <Link to="/" className="p mob-store-link desktop-hide">Store</Link>
+            {/* mobile nav options ends*/}
+
             <div className="cart">
                 <Link to="/cart">
                     {props.cart.length > 0  && <p className="p">{cartNumber}</p>}
