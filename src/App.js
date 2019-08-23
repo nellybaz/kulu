@@ -107,7 +107,7 @@ componentDidMount() {
     return (
       <div className="App">
         
-        <Router>
+        <Router onUpdate={() => window.scrollTo(0, 0)}>
         <Header cart={this.state.cart}/>
           <Switch>
             <Route exact path="/products" component={props => <ProductsPage {...this.state}/>} />
