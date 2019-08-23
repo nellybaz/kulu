@@ -4,6 +4,8 @@ import './style.css';
 import PropTypes from 'prop-types';
 
 
+
+
 function Card(props){
     return( 
         <div className="Card">
@@ -13,6 +15,7 @@ function Card(props){
                 alt="kulu product for sale" />
              </div>
             
+            
             <div className="card-info">
                 <p className="p">{props.name}</p>
                 <p className="p-price">${props.price[0].amount}</p>
@@ -21,6 +24,7 @@ function Card(props){
         </div>
     ); 
 }
+
 
 Card.propTypes = {
     name: PropTypes.string.isRequired,
