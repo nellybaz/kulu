@@ -56,10 +56,8 @@
   display: none;
 }
 
-@media only screen and (max-width: 900px) {
-  .mobile-hide {
-    display: none;
-  }
+.bg {
+  background: #131313;
 }
 
 .Card {

@@ -8,12 +8,14 @@ function Card(props){
     return(
         <div className="Card">
             <div className="card-img">
-                <img src={require('../../assets/img/sample_img.png')} alt="kulu product for sale" />
+                <img 
+                src={props.imgs[props.index].link.href} 
+                alt="kulu product for sale" />
              </div>
             
             <div className="card-info">
-                <p className="p">{props.product_name}</p>
-                <p className="p-price">${props.product_price}</p>
+                <p className="p">{props.name}</p>
+                <p className="p-price">${props.price[0].amount}</p>
             </div>
 
         </div>
@@ -21,8 +23,8 @@ function Card(props){
 }
 
 Card.propTypes = {
-    product_name: PropTypes.string.isRequired,
-    product_price: PropTypes.string.isRequired
+    name: PropTypes.string.isRequired,
+    price: PropTypes.array.isRequired
 }
 
 export default Card;

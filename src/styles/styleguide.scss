@@ -57,7 +57,6 @@ $grey:#6e6e6e;
     justify-content:center;
     flex-direction:row ;
 }
-
 .center-col{
     display:flex;
     align-items:center;
@@ -70,8 +69,12 @@ $grey:#6e6e6e;
     display: none;
 }
 
-@media only screen and (max-width: 900px){
-    .mobile-hide{
-        display: none;
-    }
+.btn{
+    // padding: 2em 3em;
+    // height: 48px;
+}
+
+.bg{
+    background: $primary;
+    
 }

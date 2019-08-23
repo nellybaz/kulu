@@ -60,42 +60,84 @@
   background: #131313;
 }
 
-.Header {
+.SingleProduct {
   width: 100%;
-  height: 100px;
-  padding: 40px 0;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  padding: 0 10%;
 }
 
-.Header div {
+.SingleProduct .container {
+  width: 90%;
+  height: 500px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  margin-top: 60px;
+}
+
+.SingleProduct .container .img-div {
   width: 100%;
   height: 100%;
 }
 
-.Header .nav-links ul {
-  padding: 0;
+.SingleProduct .container .img-div img {
+  width: 100%;
+  max-height: 100%;
 }
 
-.Header .nav-links ul li {
-  list-style: none;
-  display: inline-block;
-  margin-right: 15%;
+.SingleProduct .container .prod-info .price-section {
+  width: 100%;
+  height: 50%;
+  padding: 20px 0px;
 }
 
-.Header .nav-links ul li a {
-  text-decoration: none;
+.SingleProduct .container .prod-info .price-section h4 {
+  color: #6e6e6e;
+  font-size: 20px;
 }
 
-.Header .cart {
-  padding: 10px 20px;
+.SingleProduct .container .prod-info .price-section h4 span {
+  color: white;
+  background: #25B86C;
+  font-size: 12px;
+  padding: 5px;
+  margin: 10px;
 }
 
-.Header .cart img {
-  float: right;
-  width: 24px;
-  height: 24px;
+.SingleProduct .container .prod-info .price-section .big {
+  font-size: 48px;
+  margin-bottom: 45px;
+  margin-top: 30px;
+}
+
+.SingleProduct .container .prod-info .price-section .btn-div input {
+  height: 48px;
+  width: 100px;
+  font-size: 18px;
+}
+
+.SingleProduct .container .prod-info .price-section .btn-div .btn-send {
+  height: 48px;
+  background: #131313;
+  color: white;
+  border: none;
+  position: relative;
+  bottom: 1px;
+  padding: 0 1.5em;
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.SingleProduct .container .prod-info .info-desc {
+  width: 100%;
+}
+
+.SingleProduct .container .prod-info .info-desc .bold {
+  font-weight: 700;
+}
+
+.SingleProduct .container .prod-info .info-desc .p-text {
+  line-height: 30px;
+  color: #6e6e6e;
 }
 /*# sourceMappingURL=style.css.map */

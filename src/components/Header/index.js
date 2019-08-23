@@ -9,13 +9,13 @@ function Header(props) {
             <div className="nav-links">
                 <ul>
                     <li >
-                        <Link className="p-nav" to="/products">Products</Link>
+                        <a className="p-nav" href="/products">Products</a>
                     </li>
                     <li >
-                        <Link className="p-nav" to="/about">About</Link>
+                        <a className="p-nav" href="/about">About</a>
                     </li>
                     <li >
-                        <Link className="p-nav" to="/collections">Collections</Link>
+                        <a className="p-nav" href="/collections">Collections</a>
                     </li>
                 </ul>
             </div>
@@ -23,9 +23,9 @@ function Header(props) {
                 <h2 className="heading" >KULU</h2>
             </div>
             <div className="cart">
-                <Link to="/cart">
+                <a href="/cart">
                 <img src={require('../../assets/img/icons/shopping-bag.svg')} alt="shop with kulu" />
-                </Link>
+                </a>
             </div>
         </div>
     );

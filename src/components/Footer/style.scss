@@ -1,0 +1,28 @@
+@import '../../styles/styleguide.scss';
+
+.Footer{
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height:300px;
+    margin-top: 60px;
+
+    .footer-box{
+        width:100%;
+        // border:1px solid red;
+        height: 100%;
+
+        p{
+            color: $grey;
+        }
+
+        ul{
+            padding: 0;
+
+            li{
+                list-style: none;
+                line-height: 32px;
+            }
+        }
+    }
+}
