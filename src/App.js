@@ -26,6 +26,7 @@ const ProductsPage = (props) => lazyLoad(props, import('./views/Products/'))
 const SingleProduct = (props) => lazyLoad(props, import('./views/SingleProduct'))
 const Cart = (props) => lazyLoad(props, import('./views/Cart'))
 const Checkout = (props) => lazyLoad(props, import('./views/Checkout'))
+const ThankYou = (props) => lazyLoad(props, import('./components/ThankYou'))
 
 
 const Moltin = MoltinGateway({
@@ -65,6 +66,18 @@ updateCart=(cart)=>{
   });
 }
 
+checkoutAction=()=>{
+  Moltin.Cart().Delete().then(res => {
+    // console.log(res);
+    this.setState({
+      cart: []
+    });
+
+    window.location.href = "/thank_you";
+    
+  });
+}
+
 componentDidMount() {
     Moltin.Authenticate().then(response => {
         console.log('authenticated', response)
@@ -100,7 +113,8 @@ componentDidMount() {
             <Route exact path="/products" component={props => <ProductsPage {...this.state}/>} />
             <Route exact path="/product/:product_id" component={props => <SingleProduct {...props} state={this.state} updateCart={this.updateCart}/>} />
             <Route exact path="/cart" component={props => <Cart {...this.state} removeFunction={this.removeItemFromCart} />} />
-            <Route exact path="/checkout" component={props => <Checkout {...props} />} />
+            <Route exact path="/checkout" component={props => <Checkout {...this.state} checkoutAction={this.checkoutAction}/>} />
+            <Route exact path="/thank_you" component={props => <ThankYou {...this.props} />} />
             <Redirect from="/" to="/products" />
           </Switch>
           <AdsBanner text={adsText} />

@@ -10,4 +10,32 @@
         width:100%;
         margin-top:30px;
     }
-}
+
+    .action{
+        width:100%;
+        // border:1px solid red;
+        height: 150px;
+        div{
+            height: 100%;
+            // border:1px solid red;
+            float:right;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            flex-direction: column;
+            h3{
+                color: $grey;
+            }
+
+            a{
+                margin-top: 15px;
+                padding: 1em 3em;
+                background: $primary;
+                line-height: 20px;
+                color: white;
+                
+            }
+           
+        }
+    }
+} 

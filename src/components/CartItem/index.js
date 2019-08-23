@@ -5,11 +5,7 @@ function CartItem(props){
     function removeCartItem(id){
         
     }
-    // console.log(
-    // props
-    // )
     
-   
     return (
         <div className="CartItem">
             <div className="cart-item-info">
